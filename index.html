@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yangyi Fang</title>
+  <meta name="description" content="Yangyi Fang - Academic Homepage. General Agents, Agentic Reinforcement Learning, Multi-Turn Decision & Preference Optimization.">
+
+  <!-- Google Scholar citation meta -->
+  <meta name="citation_author" content="Yangyi Fang">
+  <meta name="citation_title" content="Yangyi Fang - Academic Homepage">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+          colors: {
+            slate: { 850: '#1e293b' },
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-white text-slate-800 antialiased">
+
+<!-- ==================== HEADER / NAV ==================== -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b" id="site-header">
+  <div class="max-w-[980px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+    <a href="#about" class="text-slate-900 font-bold text-lg tracking-tight hover:text-primary-600 transition-colors">
+      Yangyi Fang
+    </a>
+    <nav class="hidden md:flex items-center space-x-5" id="main-nav">
+      <a href="#about" class="nav-link text-base font-medium transition-colors duration-200 text-slate-500 hover:text-slate-900" data-section="about">About</a>
+      <a href="#research" class="nav-link text-base font-medium transition-colors duration-200 text-slate-500 hover:text-slate-900" data-section="research">Research</a>
+      <a href="#publications" class="nav-link text-base font-medium transition-colors duration-200 text-slate-500 hover:text-slate-900" data-section="publications">Publications</a>
+    </nav>
+    <div class="md:hidden text-slate-500">
+      <span class="text-xs font-medium text-primary-600 uppercase" id="mobile-section-indicator">About</span>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[980px] mx-auto px-4 sm:px-6 pt-16">
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="py-12 md:py-16 scroll-mt-16">
+  <div class="flex flex-col-reverse md:flex-row items-center md:items-start gap-8 md:gap-12 pt-8 pb-4">
+    <div class="flex-1 space-y-6 text-center md:text-left">
+      <div class="space-y-2">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight tech-accent">
+          Yangyi Fang
+          <span class="text-primary-600 wave-emoji text-2xl align-top">👋</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-medium text-slate-700 futuristic-text">
+          General Agents &amp; Agentic Reinforcement Learning
+        </p>
+      </div>
+
+      <p class="text-slate-600 leading-relaxed text-base md:text-lg max-w-2xl">
+        My research interest is broadly in building <strong>general agents</strong> through <strong>reinforcement learning</strong> — from environment scaling and RL algorithm design to credit assignment and reward modeling.
+      </p>
+    </div>
+
+    <!-- Profile Photo + Social -->
+    <div class="relative shrink-0 w-36 md:w-44 flex flex-col items-center">
+      <div class="aspect-square rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 w-full">
+        <img src="https://avatars.githubusercontent.com/u/165883697?s=400&u=f60098777c2708acac387c1126407de86ec13924&v=4" alt="Yangyi Fang" class="profile-image w-full h-full object-cover">
+      </div>
+      <div class="flex flex-col gap-2 mt-4 w-full">
+        <a href="mailto:yangyi.fang06@gmail.com" class="social-link-vertical px-4 py-2 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 hover:text-primary-600 hover:border-primary-300 transition shadow-sm flex items-center justify-center gap-2 text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+          Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=CVPnwtIAAAAJ" target="_blank" rel="noopener noreferrer" class="social-link-vertical px-4 py-2 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 hover:text-primary-600 hover:border-primary-300 transition shadow-sm flex items-center justify-center gap-2 text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0.5 9.5 12 1l11.5 8.5-4.742 4.269C17.548 12.179 14.978 11.5 12 11.5s-5.548.679-6.758 2.269z"></path><path d="M12 15a7 7 0 100 14 7 7 0 000-14z"></path></svg>
+          Google Scholar
+        </a>
+        <a href="https://github.com/GithubX-F" target="_blank" rel="noopener noreferrer" class="social-link-vertical px-4 py-2 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 hover:text-primary-600 hover:border-primary-300 transition shadow-sm flex items-center justify-center gap-2 text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CURRENTLY WORKING ON ==================== -->
+<section id="research" class="pt-4 pb-8 scroll-mt-16">
+  <details class="group" open>
+    <summary class="cursor-pointer flex items-center text-lg md:text-xl font-semibold text-slate-800 mb-6 ml-4 select-none">
+      <svg class="w-5 h-5 mr-2 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      🚀 Currently Working On
+      <div class="section-title-bar h-0.5 w-12 ml-3 rounded-full opacity-60"></div>
+    </summary>
+    <div class="details-content">
+      <p class="text-sm text-slate-500 ml-4 mb-5">Recent directions I am actively exploring:</p>
+      <ul class="space-y-3 ml-4 max-w-3xl">
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
+          <span class="text-slate-700 leading-relaxed">Environment scaling for general agents</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
+          <span class="text-slate-700 leading-relaxed">Credit assignment for multi-turn LLM agents</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
+          <span class="text-slate-700 leading-relaxed">Resource allocation in agent RL</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
+          <span class="text-slate-700 leading-relaxed">On-policy distillation for LLM agents</span>
+        </li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- ==================== PUBLICATIONS ==================== -->
+<section id="publications" class="pt-4 pb-12 md:pb-16 scroll-mt-16">
+  <details class="group" open>
+    <summary class="cursor-pointer flex items-center text-lg md:text-xl font-semibold text-slate-800 mb-6 ml-4 select-none">
+      <svg class="w-5 h-5 mr-2 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      📝 Publications
+      <div class="section-title-bar h-0.5 w-12 ml-3 rounded-full opacity-60"></div>
+    </summary>
+    <div class="details-content">
+      <p class="text-sm text-slate-500 ml-4 mb-6">
+        <span class="font-semibold text-primary-600">*</span> denotes equal contribution. &nbsp;
+        Authors named <span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span> are highlighted.
+      </p>
+
+      <!-- ---------- Publications ---------- -->
+      <h3 class="flex items-center text-base md:text-lg font-semibold text-slate-700 mb-5 ml-4">
+        🌟 Publications
+        <div class="section-subtitle-bar h-0.5 w-12 ml-3 rounded-full opacity-60"></div>
+      </h3>
+      <div class="space-y-6 mb-10">
+
+        <!-- ProxMO -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/ProxMO.png" alt="ProxMO overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">Proximity-Based Multi-Turn Optimization: Practical Credit Assignment for LLM Agent Training</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Jiaye Lin, Xiaoliang Fu, Cong Qin, Haolin Shi, Chang Liu, Peilin Zhao.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ACL 2026</span>
+              <span class="award-badge-inline"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/></svg><span>Oral</span></span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://arxiv.org/abs/2602.19225" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+              <a href="https://github.com/GithubX-F/ProxMO-RL" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg><span>Code</span></a>
+            </div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">Softens cross-turn comparison boundaries by state proximity and corrects gradient strength by intra-group difficulty...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">In multi-turn agent RL, turns within a trajectory group carry rich comparable signal, but heterogeneous states make naive grouping mislead credit assignment. We soften step-wise comparison boundaries by <em>state proximity</em> and rescale gradients by <em>intra-group difficulty</em> — two lightweight mechanisms adding only +1.09% overhead.</p></details>
+          </div>
+        </div>
+
+        <!-- PieceHint -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/PieceHint.png" alt="PieceHint overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">Placing Puzzle Pieces Where They Matter: A Question Augmentation Framework for Reinforcement Learning</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Jiaye Lin, Xiaoliang Fu, Cong Qin, Haolin Shi.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ACL 2026</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://arxiv.org/abs/2604.15830" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+            </div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">Bottleneck-driven task augmentation: locates high-impact steps via value attribution and synthesizes a difficulty-adaptive curriculum...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">A bottleneck-driven automatic task-augmentation framework: value attribution locates high-impact steps in a task chain, variant tasks are synthesized around the key bottlenecks, and a difficulty-adaptive mechanism produces curriculum training data — mitigating overfitting on easy tasks and reward sparsity on hard ones.</p></details>
+          </div>
+        </div>
+
+        <!-- DynaMO -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/DynaMO.png" alt="DynaMO overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">How to Allocate, How to Learn? Dynamic Rollout Allocation and Advantage Modulation for Policy Optimization</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Jiaye Lin, Xiaoliang Fu, Cong Qin, Haolin Shi, Chaowen Hu, Lu Pan, Ke Zeng, Xunliang Cai.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ACL 2026</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://arxiv.org/abs/2602.19208" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+              <a href="https://github.com/GithubX-F/DynaMO-RL" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg><span>Code</span></a>
+            </div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">Sequence-level variance-minimizing dynamic allocation + token-level gradient-entropy update stabilization...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">We derive a variance-minimizing dynamic rollout-allocation policy at the sequence level, and introduce a gradient-entropy-bounded update-magnitude stabilization at the token level. Outperforms 80/20 (Qwen) and Clip-Cov / KL-Cov (Shanghai AI Lab).</p></details>
+          </div>
+        </div>
+
+        <!-- DGPO -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/DGPO.png" alt="DGPO overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">From log&pi; to &pi;: Taming Divergence in Soft Clipping via Bilateral Decoupled Decay of Probability Gradient Weight</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">Xiaoliang Fu*, <span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang*</span>, Jiaye Lin*, Chaowen Hu, Cong Qin, Zekai Shao, Binbin Zheng, Lu Pan, Ke Zeng.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ACL 2026</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://arxiv.org/abs/2603.14389" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+              <a href="https://github.com/VenomRose-Juri/DGPO-RL" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg><span>Code</span></a>
+            </div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">Proves IS gradients should align from logπ to π; bilateral decoupled soft clipping cures boundary gradient divergence...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">We theoretically show that importance-sampling gradient design should align from log&pi;<sub>&theta;</sub> to &pi;<sub>&theta;</sub>, and propose bilateral decoupled soft clipping to resolve boundary gradient divergence. Surpasses GPPO / CE-GPPO (Kuaishou) and CISPO (MiniMax).</p></details>
+          </div>
+        </div>
+
+        <!-- MASPO -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/MASPO.png" alt="MASPO overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">MASPO: Unifying Gradient Utilization, Probability Mass, and Signal Reliability for Robust and Sample-Efficient LLM Reasoning</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">Xiaoliang Fu*, <span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang*</span>, Jiaye Lin*, Binbin Zheng, Chaowen Hu, Zekai Shao, Cong Qin, Lu Pan, Ke Zeng, Xunliang Cai.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ACL 2026</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://arxiv.org/abs/2602.17550" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+              <a href="https://github.com/VenomRose-Juri/MASPO-RL" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg><span>Code</span></a>
+            </div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">A Gaussian one-sided gating method addressing low clip utilization, long-tail misalignment, and advantage-credit asymmetry...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">A Gaussian one-sided gating algorithm that addresses low gradient-clip utilization, long-tail distribution misalignment, and advantage/credit asymmetry in RLVR. Outperforms SAPO (Alibaba).</p></details>
+          </div>
+        </div>
+
+        <!-- ANCHOR -->
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">ANCHOR: Taming Entropy Dynamics for Stable and Efficient Reasoning of Large Language Models</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">Cong Qin*, <span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang*</span>, Jiaye Lin*, Xiaoliang Fu*, Chaowen Hu, Huanyao Zhang, Yifu Guo, Zheyuan Gu, Kaitong Qin, Jiawen Kang, Deyang Ding, Peilin Zhao.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">KDD 2026</span>
+            </div></div>
+            <details class="group/tldr tldr-details"><summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 transition-colors flex items-start gap-1"><span class="font-semibold text-slate-600 shrink-0">TL;DR:</span><span class="tldr-preview">Tames entropy-collapse-induced gradient deadlock; +14.4% on LiveCodeBench Avg@32 without verbose generation...</span></summary><p class="mt-1 text-sm text-slate-500 tldr-full">Targets the gradient deadlock caused by entropy collapse in LLM RL. ANCHOR surpasses all baselines across six reasoning benchmarks, with +14.4% Avg@32 on code reasoning (LiveCodeBench) and without inducing verbose generation.</p></details>
+          </div>
+        </div>
+
+      </div><!-- /publications-selected -->
+
+      <div class="space-y-6 mb-10">
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">When Tokens Decay and Turns Amplify: A Dual-Granularity Framework for Multi-Turn Preference Optimization</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Jiaye Lin, Xiaoliang Fu, Haolin Shi, Cong Qin, Chaowen Hu.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ICLR 2026 SPOT</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://iclr.cc/virtual/2026/10013460" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">Efficient and Stable Scaling of Reinforcement Learning for LLMs via Dynamic Allocation and Gradient Modulation</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Jiaye Lin, Xiaoliang Fu, Cong Qin, Haolin Shi, Chaowen Hu.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">ICLR 2026 SPOT</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://iclr.cc/virtual/2026/10013455" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">Gesture Clustering for Real-Time User Disentanglement in Shared-Account Recommendation</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">Huiying Hu, Xinlang Yue, Kexin Yi, Lingzhen Xu, <span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Muyang Li, Yongqi Liu, Kaiqiao Zhan.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">SIGIR 2026</span>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="shrink-0 w-full md:w-56">
+            <img src="/images/pubs/AAAI-Intent.png" alt="Multi-granularity Intent Modeling overview" class="teaser-image w-full rounded-lg border border-slate-200 shadow-sm">
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">Multi-granularity Intent Modeling with Adversarial Robustness for Sequential Recommendation</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed"><span class="font-bold text-slate-900 underline decoration-slate-300 underline-offset-2">Yangyi Fang</span>, Haolin Shi.</p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-rank-badge">CCF-A</span>
+              <span class="venue-short-badge">AAAI 2026</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium mb-3">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/38489" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg><span>Paper</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /other -->
+
+      <!-- ---------- Models & Technical Reports ---------- -->
+      <h3 class="flex items-center text-base md:text-lg font-semibold text-slate-700 mb-5 ml-4">
+        🛠️ Models &amp; Technical Reports
+        <div class="section-subtitle-bar h-0.5 w-12 ml-3 rounded-full opacity-60"></div>
+      </h3>
+      <div class="space-y-6">
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">GLM-5.1: Towards Long-Horizon Tasks</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">GLM Team, Z.AI. &nbsp;&middot;&nbsp; <span class="text-slate-500 italic">Contributor</span></p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-short-badge technical-report-badge">Technical Report</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium">
+              <a href="https://z.ai/blog/glm-5.1" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg><span>Blog</span></a>
+              <a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3 8.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM12 17c-2 0-3.5-1.5-3.5-3h7c0 1.5-1.5 3-3.5 3z"/></svg><span>Model Card</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-card group flex flex-col md:flex-row gap-6 p-4 rounded-xl">
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-700 transition-colors">LongCat Interaction Technical Report</h3>
+            <p class="text-slate-600 text-sm mb-2 leading-relaxed">LongCat Interaction Team. &nbsp;&middot;&nbsp; <span class="text-slate-500 italic">Contributor</span></p>
+            <div class="mb-3"><div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="venue-short-badge technical-report-badge">Technical Report</span>
+            </div></div>
+            <div class="flex flex-wrap gap-3 text-sm font-medium">
+              <a href="https://arxiv.org/pdf/2510.13291" target="_blank" rel="noopener noreferrer" class="pub-link flex items-center gap-1.5 text-primary-600 hover:text-primary-800 transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg><span>Report</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </details>
+</section>
+
+
+</main>
+
+<footer class="border-t border-slate-100 py-8">
+  <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
+    &copy; 2026 Yangyi Fang. Built with Tailwind CSS &amp; hosted on GitHub Pages.
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
