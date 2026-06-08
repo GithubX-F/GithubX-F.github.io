@@ -409,11 +409,11 @@
       document.body.appendChild(s);
     }
     var timer = setTimeout(fallbackCN, 2500);
-    fetch('https://ipwho.is/')
+    fetch('https://get.geojs.io/v1/ip/geo.json')
       .then(function (r) { return r.json(); })
       .then(function (d) {
         clearTimeout(timer);
-        if (d && d.success !== false && (d.city || d.country)) {
+        if (d && (d.city || d.country)) {
           show([d.city, d.country]);
         } else {
           fallbackCN();
