@@ -376,7 +376,7 @@
 
 <footer class="border-t border-slate-100 py-8">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
-    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500" style="display:none;"></p>
+    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500">👋 Hello, visitor!</p>
     <p id="site-stats" class="mb-2 text-xs text-slate-400">
       <span id="busuanzi_container_site_pv">Total views: <span id="busuanzi_value_site_pv">…</span></span>
       &nbsp;·&nbsp;
@@ -396,8 +396,7 @@
       parts = parts.filter(Boolean);
       if (shown || !parts.length) return;
       shown = true;
-      el.textContent = '👋 Hello, visitor from ' + parts.join(', ');
-      el.style.display = '';
+      el.textContent = '👋 Hello, visitor from ' + parts.join(', ') + '!';
     }
     function fallbackCN() {
       if (shown) return;
