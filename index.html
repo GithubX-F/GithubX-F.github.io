@@ -389,17 +389,38 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
   (function () {
+    var el = document.getElementById('visitor-greeting');
+    if (!el) return;
+    var shown = false;
+    function show(parts) {
+      parts = parts.filter(Boolean);
+      if (shown || !parts.length) return;
+      shown = true;
+      el.textContent = '👋 Hello, visitor from ' + parts.join(', ');
+      el.style.display = '';
+    }
+    function fallbackCN() {
+      if (shown) return;
+      window.__ipcb = function (d) {
+        if (d && (d.city || d.pro)) show([d.city || d.pro]);
+      };
+      var s = document.createElement('script');
+      s.setAttribute('charset', 'gbk');
+      s.src = 'https://whois.pconline.com.cn/ipJson.jsp?json=true&callback=__ipcb';
+      document.body.appendChild(s);
+    }
+    var timer = setTimeout(fallbackCN, 2500);
     fetch('https://ipwho.is/')
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (!d || d.success === false) return;
-        var parts = [d.city, d.country].filter(Boolean);
-        if (!parts.length) return;
-        var el = document.getElementById('visitor-greeting');
-        el.textContent = '👋 Hello, visitor from ' + parts.join(', ');
-        el.style.display = '';
+        clearTimeout(timer);
+        if (d && d.success !== false && (d.city || d.country)) {
+          show([d.city, d.country]);
+        } else {
+          fallbackCN();
+        }
       })
-      .catch(function () {});
+      .catch(function () { clearTimeout(timer); fallbackCN(); });
   })();
 </script>
 <script src="/assets/js/main.js"></script>
