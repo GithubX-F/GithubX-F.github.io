@@ -398,23 +398,32 @@
       shown = true;
       el.textContent = '👋 Hello, visitor from ' + parts.join(', ') + '!';
     }
+    function tryGeoJS() {
+      if (shown) return;
+      fetch('https://get.geojs.io/v1/ip/geo.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (d) show([d.city || d.region, d.country]); })
+        .catch(function () {});
+    }
     function fallbackCN() {
       if (shown) return;
       window.__ipcb = function (d) {
         if (d && (d.city || d.pro)) show([d.city || d.pro]);
+        else tryGeoJS();
       };
       var s = document.createElement('script');
       s.setAttribute('charset', 'gbk');
+      s.onerror = tryGeoJS;
       s.src = 'https://whois.pconline.com.cn/ipJson.jsp?json=true&callback=__ipcb';
       document.body.appendChild(s);
     }
     var timer = setTimeout(fallbackCN, 2500);
-    fetch('https://get.geojs.io/v1/ip/geo.json')
+    fetch('https://ipapi.co/json/')
       .then(function (r) { return r.json(); })
       .then(function (d) {
         clearTimeout(timer);
-        if (d && (d.city || d.country)) {
-          show([d.city, d.country]);
+        if (d && (d.city || d.country_name)) {
+          show([d.city, d.country_name]);
         } else {
           fallbackCN();
         }
