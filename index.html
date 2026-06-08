@@ -73,8 +73,10 @@
 
     <!-- Profile Photo + Social -->
     <div class="relative shrink-0 w-36 md:w-44 flex flex-col items-center">
-      <div class="aspect-square rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 w-full">
-        <img src="https://avatars.githubusercontent.com/u/165883697?s=400&u=f60098777c2708acac387c1126407de86ec13924&v=4" alt="Yangyi Fang" class="profile-image w-full h-full object-cover">
+      <div class="avatar-ring aspect-square rounded-2xl p-[3px] shadow-lg w-full">
+        <div class="aspect-square rounded-[14px] overflow-hidden bg-slate-50 w-full">
+          <img src="https://avatars.githubusercontent.com/u/165883697?s=400&u=f60098777c2708acac387c1126407de86ec13924&v=4" alt="Yangyi Fang" class="profile-image w-full h-full object-cover">
+        </div>
       </div>
       <div class="flex flex-col gap-2 mt-4 w-full">
         <a href="mailto:yangyi.fang06@gmail.com" class="social-link-vertical px-4 py-2 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 hover:text-primary-600 hover:border-primary-300 transition shadow-sm flex items-center justify-center gap-2 text-sm">
@@ -104,20 +106,20 @@
     </summary>
     <div class="details-content">
       <p class="text-sm text-slate-500 ml-4 mb-5">Recent directions I am actively exploring:</p>
-      <ul class="space-y-3 ml-4 max-w-3xl">
-        <li class="flex items-start gap-3">
+      <ul class="grid sm:grid-cols-2 gap-3 ml-4 max-w-3xl list-none">
+        <li class="research-card flex items-start gap-3 p-3 rounded-lg">
           <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
           <span class="text-slate-700 leading-relaxed">Environment scaling for general agents</span>
         </li>
-        <li class="flex items-start gap-3">
+        <li class="research-card flex items-start gap-3 p-3 rounded-lg">
           <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
           <span class="text-slate-700 leading-relaxed">Credit assignment for multi-turn LLM agents</span>
         </li>
-        <li class="flex items-start gap-3">
+        <li class="research-card flex items-start gap-3 p-3 rounded-lg">
           <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
           <span class="text-slate-700 leading-relaxed">Resource allocation in agent RL</span>
         </li>
-        <li class="flex items-start gap-3">
+        <li class="research-card flex items-start gap-3 p-3 rounded-lg">
           <span class="mt-1.5 shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></span>
           <span class="text-slate-700 leading-relaxed">On-policy distillation for LLM agents</span>
         </li>
