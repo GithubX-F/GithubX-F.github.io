@@ -376,6 +376,7 @@
 
 <footer class="border-t border-slate-100 py-8">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
+    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500" style="display:none;"></p>
     <p id="site-stats" class="mb-2 text-xs text-slate-400">
       <span id="busuanzi_container_site_pv">Total views: <span id="busuanzi_value_site_pv">…</span></span>
       &nbsp;·&nbsp;
@@ -386,6 +387,21 @@
 </footer>
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  (function () {
+    fetch('https://ipwho.is/')
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d || d.success === false) return;
+        var parts = [d.city, d.country].filter(Boolean);
+        if (!parts.length) return;
+        var el = document.getElementById('visitor-greeting');
+        el.textContent = '👋 Hello, visitor from ' + parts.join(', ');
+        el.style.display = '';
+      })
+      .catch(function () {});
+  })();
+</script>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
