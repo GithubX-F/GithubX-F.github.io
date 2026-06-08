@@ -42,8 +42,13 @@
 </head>
 <body class="font-sans bg-white text-slate-800 antialiased">
 
+<!-- ==================== VISITOR BANNER ==================== -->
+<div id="visitor-banner" class="fixed top-0 inset-x-0 z-[60] bg-slate-900/90 text-slate-100 text-center text-xs py-1.5 backdrop-blur-sm">
+  <span id="visitor-greeting">👋 Hello, visitor!</span>
+</div>
+
 <!-- ==================== HEADER / NAV ==================== -->
-<header class="fixed top-0 left-0 right-0 z-50 border-b" id="site-header">
+<header class="fixed top-7 left-0 right-0 z-50 border-b" id="site-header">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 flex items-center justify-between">
     <a href="#about" class="text-slate-900 font-bold text-lg tracking-tight hover:text-primary-600 transition-colors">
       Yangyi Fang
@@ -59,7 +64,7 @@
   </div>
 </header>
 
-<main class="max-w-[980px] mx-auto px-4 sm:px-6 pt-16">
+<main class="max-w-[980px] mx-auto px-4 sm:px-6 pt-24">
 
 <!-- ==================== ABOUT ==================== -->
 <section id="about" class="py-12 md:py-16 scroll-mt-16">
@@ -376,7 +381,6 @@
 
 <footer class="border-t border-slate-100 py-8">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
-    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500">👋 Hello, visitor!</p>
     <p id="site-stats" class="mb-2 text-xs text-slate-400">
       <span id="busuanzi_container_site_pv">Total views: <span id="busuanzi_value_site_pv">…</span></span>
       &nbsp;·&nbsp;
