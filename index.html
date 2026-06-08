@@ -40,7 +40,7 @@
     }
   </script>
 </head>
-<body class="font-sans bg-white text-slate-800 antialiased">
+<body class="font-sans bg-white text-slate-800 antialiased pb-8">
 
 <!-- ==================== HEADER / NAV ==================== -->
 <header class="fixed top-0 left-0 right-0 z-50 border-b" id="site-header">
@@ -376,7 +376,6 @@
 
 <footer class="border-t border-slate-100 py-8">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
-    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500">👋 Hi there!</p>
     <p id="site-stats" class="mb-2 text-xs text-slate-400">
       <span id="busuanzi_container_site_pv">Total views: <span id="busuanzi_value_site_pv">…</span></span>
       &nbsp;·&nbsp;
@@ -460,6 +459,11 @@
       .catch(function () { clearTimeout(timer); fallbackCN(); });
   })();
 </script>
+<!-- ==================== STICKY VISITOR BAR ==================== -->
+<div id="visitor-bar" class="fixed bottom-0 inset-x-0 z-[60] bg-slate-900/90 text-slate-100 text-center text-xs py-1.5 px-3 backdrop-blur-sm truncate">
+  <span id="visitor-greeting">👋 Hi there!</span>
+</div>
+
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
