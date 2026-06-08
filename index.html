@@ -42,13 +42,8 @@
 </head>
 <body class="font-sans bg-white text-slate-800 antialiased">
 
-<!-- ==================== VISITOR BANNER ==================== -->
-<div id="visitor-banner" class="fixed top-0 inset-x-0 z-[60] bg-slate-900/90 text-slate-100 text-center text-xs py-1.5 backdrop-blur-sm">
-  <span id="visitor-greeting">👋 Hello, visitor!</span>
-</div>
-
 <!-- ==================== HEADER / NAV ==================== -->
-<header class="fixed top-7 left-0 right-0 z-50 border-b" id="site-header">
+<header class="fixed top-0 left-0 right-0 z-50 border-b" id="site-header">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 flex items-center justify-between">
     <a href="#about" class="text-slate-900 font-bold text-lg tracking-tight hover:text-primary-600 transition-colors">
       Yangyi Fang
@@ -64,7 +59,7 @@
   </div>
 </header>
 
-<main class="max-w-[980px] mx-auto px-4 sm:px-6 pt-24">
+<main class="max-w-[980px] mx-auto px-4 sm:px-6 pt-16">
 
 <!-- ==================== ABOUT ==================== -->
 <section id="about" class="py-12 md:py-16 scroll-mt-16">
@@ -381,6 +376,7 @@
 
 <footer class="border-t border-slate-100 py-8">
   <div class="max-w-[980px] mx-auto px-4 sm:px-6 text-center text-sm text-slate-400">
+    <p id="visitor-greeting" class="mb-2 text-xs text-slate-500">👁️ Looking for you…</p>
     <p id="site-stats" class="mb-2 text-xs text-slate-400">
       <span id="busuanzi_container_site_pv">Total views: <span id="busuanzi_value_site_pv">…</span></span>
       &nbsp;·&nbsp;
@@ -396,23 +392,52 @@
     var el = document.getElementById('visitor-greeting');
     if (!el) return;
     var shown = false;
-    function show(parts) {
-      parts = parts.filter(Boolean);
-      if (shown || !parts.length) return;
+
+    function device() {
+      var u = navigator.userAgent;
+      var os = /Windows/.test(u) ? 'Windows'
+        : /Mac OS X|Macintosh/.test(u) ? 'macOS'
+        : /iPhone|iPad|iPod/.test(u) ? 'iOS'
+        : /Android/.test(u) ? 'Android'
+        : /Linux/.test(u) ? 'Linux' : '未知系统';
+      var br = /Edg\//.test(u) ? 'Edge'
+        : /OPR\//.test(u) ? 'Opera'
+        : /Chrome\//.test(u) ? 'Chrome'
+        : /Firefox\//.test(u) ? 'Firefox'
+        : /Safari\//.test(u) ? 'Safari' : '未知浏览器';
+      return br + ' on ' + os;
+    }
+    function localTime() {
+      try { return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+      catch (e) { return ''; }
+    }
+    function render(geo) {
+      if (shown) return;
       shown = true;
-      el.textContent = '👋 Hello, visitor from ' + parts.join(', ') + '!';
+      geo = geo || {};
+      var loc = [geo.city, geo.country].filter(Boolean).join(', ');
+      var bits = [];
+      if (loc) bits.push('📍 ' + loc);
+      if (geo.ip) bits.push('🌐 ' + geo.ip);
+      if (geo.org) bits.push('📡 ' + geo.org);
+      bits.push('💻 ' + device());
+      var t = localTime();
+      if (t) bits.push('🕐 ' + t);
+      el.textContent = '👁️ I see you — ' + bits.join('  ·  ');
     }
     function tryGeoJS() {
       if (shown) return;
       fetch('https://get.geojs.io/v1/ip/geo.json')
         .then(function (r) { return r.json(); })
-        .then(function (d) { if (d) show([d.city || d.region, d.country]); })
-        .catch(function () {});
+        .then(function (d) {
+          render(d ? { ip: d.ip, city: d.city || d.region, country: d.country, org: d.organization_name } : {});
+        })
+        .catch(function () { render({}); });
     }
     function fallbackCN() {
       if (shown) return;
       window.__ipcb = function (d) {
-        if (d && (d.city || d.pro)) show([d.city || d.pro]);
+        if (d && (d.city || d.pro)) render({ ip: d.ip, city: d.city || d.pro, country: '中国' });
         else tryGeoJS();
       };
       var s = document.createElement('script');
@@ -427,7 +452,7 @@
       .then(function (d) {
         clearTimeout(timer);
         if (d && (d.city || d.country_name)) {
-          show([d.city, d.country_name]);
+          render({ ip: d.ip, city: d.city, country: d.country_name, org: d.org });
         } else {
           fallbackCN();
         }
