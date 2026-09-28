@@ -1,0 +1,22 @@
+# Personal info — never publish
+_pages/
+_data/
+_config.yml
+images/me.jpg
+papers/
+
+# Jekyll / Ruby template cruft
+Gemfile
+Gemfile.lock
+Gemfile*.bak
+.bundle/
+vendor/
+.gems/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+push.sh
+
+# OS
+.DS_Store
